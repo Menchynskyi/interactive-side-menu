@@ -4,13 +4,13 @@ const content = document.querySelector('#content'),
 const musicList = document.createElement('UL');
 musicList.classList.add('music-list');
 
-const addListElements = arr => {
-    arr.forEach(el => {
+const addListElements = dataArr => {
+    dataArr.forEach(el => {
         const musicListElement = document.createElement('LI'),
             musicListTitle = document.createTextNode(el.title);
 
         musicListElement.classList.add('music-list-element');
-        musicListElement.dataset.index = arr.indexOf(el);
+        musicListElement.dataset.index = dataArr.indexOf(el);
         musicListElement.appendChild(musicListTitle);
         musicList.appendChild(musicListElement);
     })
