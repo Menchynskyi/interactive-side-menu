@@ -31,6 +31,8 @@ header {
 }
 
 .container {
+    align-items: flex-start;
+    flex-flow: row wrap;    
     display: flex;
     width: 100%;
 }
@@ -101,11 +103,6 @@ header {
 }
 
 @media all and (min-width: 751px) and (max-width: 900px) {
-    .container {
-        align-items: flex-start;
-        flex-flow: row wrap;
-    }
-
     .list {
         font-size: 1.1em;  
         width: 25%;
@@ -123,11 +120,6 @@ header {
 }
 
 @media all and (min-width: 901px){
-    .container {
-        align-items: flex-start;
-        flex-flow: row wrap;
-    }
-
     .list { 
         width: 20%;
     }
