@@ -4,15 +4,19 @@ const content = document.querySelector('#content'),
 const musicList = document.createElement('UL');
 musicList.classList.add('music-list');
 
-musicData.forEach(el => {
-    const musicListElement = document.createElement('LI'),
-          musicListTitle = document.createTextNode(el.title);
+const addListElements = arr => {
+    arr.forEach(el => {
+        const musicListElement = document.createElement('LI'),
+            musicListTitle = document.createTextNode(el.title);
 
-    musicListElement.classList.add('music-list-element');
-    musicListElement.dataset.index = musicData.indexOf(el);
-    musicListElement.appendChild(musicListTitle);
-    musicList.appendChild(musicListElement);
-});
+        musicListElement.classList.add('music-list-element');
+        musicListElement.dataset.index = arr.indexOf(el);
+        musicListElement.appendChild(musicListTitle);
+        musicList.appendChild(musicListElement);
+    })
+};
+
+addListElements(musicData);
 
 nav.appendChild(musicList).firstChild.classList.add('active');
 
