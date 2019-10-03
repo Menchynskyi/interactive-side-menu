@@ -5,7 +5,7 @@ const musicList = document.createElement('UL');
 musicList.classList.add('music-list');
 
 const addListElements = dataArr => {
-    dataArr.forEach(el => {
+    dataArr.map(el => {
         const musicListElement = document.createElement('LI'),
             musicListTitle = document.createTextNode(el.title);
 
